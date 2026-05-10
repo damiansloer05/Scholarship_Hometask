@@ -1,0 +1,42 @@
+# Environment — never commit real values
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+.output/
+.nuxt/
+.nitro/
+
+# Terraform state — store in GCS backend in production
+infra/.terraform/
+infra/.terraform.lock.hcl
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/terraform.tfvars
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test artefacts
+coverage/
+playwright-report/
+test-results/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.idea/
+
+# Docker
+.dockerignore
+
+infra/terraform.tfvars

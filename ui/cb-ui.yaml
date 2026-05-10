@@ -1,0 +1,10 @@
+﻿steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - build
+      - --target=runner
+      - --build-arg=NUXT_PUBLIC_API_URL=/graphql
+      - --tag=us-central1-docker.pkg.dev/qwiklabs-gcp-02-e68bf14fb7ad/admissions-repo/admissions-ui:latest
+      - .
+images:
+  - 'us-central1-docker.pkg.dev/qwiklabs-gcp-02-e68bf14fb7ad/admissions-repo/admissions-ui:latest'

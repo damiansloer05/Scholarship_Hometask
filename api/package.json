@@ -1,0 +1,44 @@
+{
+  "name": "admissions-api",
+  "version": "1.0.0",
+  "description": "Admissions readiness GraphQL API — Node.js + TypeScript + GraphQL Yoga + Drizzle ORM",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --project tsconfig.build.json",
+    "start": "node dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:seed": "tsx src/db/seed.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.3",
+    "bcryptjs": "^3.0.3",
+    "dataloader": "^2.2.2",
+    "dotenv": "^16.4.1",
+    "drizzle-orm": "^0.30.4",
+    "graphql": "^16.8.1",
+    "graphql-yoga": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.11.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^20.11.0",
+    "@types/pg": "^8.11.2",
+    "drizzle-kit": "^0.21.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

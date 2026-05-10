@@ -1,0 +1,28 @@
+# =============================================================
+#  terraform.tfvars — generated from root .env by `make setup`
+#  Copy to terraform.tfvars and fill in real values.
+#  NEVER commit terraform.tfvars (contains db_password).
+# =============================================================
+
+project_id             = "my-gcp-project-id"
+region                 = "us-central1"
+zone                   = "us-central1-a"
+
+domain_root            = "yourdomain.com"
+api_subdomain          = "api"
+ui_subdomain           = "app"
+
+artifact_registry_repo = "admissions-repo"
+api_image_name         = "admissions-api"
+ui_image_name          = "admissions-ui"
+api_service_name       = "admissions-api"
+ui_service_name        = "admissions-ui"
+
+db_instance_name       = "admissions-db"
+db_name                = "admissions"
+db_user                = "admissions_user"
+db_password            = "replace-with-a-32-char-secure-password"
+
+github_owner           = "your-github-username"
+github_repo            = "admissions-dashboard"
+github_branch          = "main"
